@@ -1,0 +1,33 @@
+@import url("App.css");
+
+.navbar {
+    position: sticky;
+    top:0;
+    height: 28vh;
+    width: 20vw;
+    margin-left: 4rem;
+    padding-top: 2rem;
+    background-color: transparent;
+    color: var(--font-main);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    mix-blend-mode:exclusion
+
+}
+
+.navbar::after {
+    mix-blend-mode: difference;
+}
+
+h4 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--font-main);
+    font-size: 1.4rem;
+ 
+}

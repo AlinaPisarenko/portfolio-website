@@ -1,0 +1,48 @@
+:root {
+  /* --bg-main: #070937;
+  --font-main: #f2c4b8; */
+  /* --bg-main: #181f2a;
+  --font-main:#df888f; */
+  --bg-main: #4832d5;
+  --font-main: #ccf281 ;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-main);
+  color: var(--font-main);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.App {
+  min-height: 100vh;
+
+}
+
+.nav-skills-container {
+  display: flex;
+}

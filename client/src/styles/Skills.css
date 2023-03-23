@@ -1,0 +1,8 @@
+@import url("App.css");
+
+.skills {
+    height: 100vh;
+
+    background-color: var(--font-main);
+    color: var(--bg-main);
+}

@@ -1,0 +1,184 @@
+@import url("App.css");
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+ /* background-color: aqua; */
+     /* Create the parallax scrolling effect */
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.home-container {
+    height: 80vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1, h2 {
+    font-weight: 300;
+
+}
+
+h1 {
+    font-size: 15vw;
+    line-height: 1;
+    width: min-content;
+    letter-spacing: -0.5rem;
+}
+
+h2 {
+    font-size: 3vw;
+    align-self: end;
+    letter-spacing: 0.1rem;
+}
+
+.line {
+    width: 85vw;
+    height: 1px;
+    background: var(--font-main);
+    position: absolute;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-main);
+}
+
+#line-top {
+    top: 7vh;
+   right: 0;
+}
+
+#line-top::before { 
+    top: 0;
+    right: 0;
+    animation: animate-top 1s linear;
+    animation-fill-mode: forwards;     
+}
+
+
+#line-bottom {
+    bottom: 7vh;
+    left: 0;
+}
+
+#line-bottom::before { 
+    top: 0;
+    left: 0;
+    animation: animate-bottom 1s linear;
+    animation-fill-mode: forwards;     
+}
+
+@keyframes animate-top {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes animate-bottom {
+    0% {
+       left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+
+.f-name,
+.l-name {
+  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+
+.home-container {
+    animation: outer-left 1s 1s ease both;
+  }
+
+.home-container-inner{
+    display: inline-block;
+    animation: inner-left-50 1s 1s ease both;
+  }
+  
+  .f-name {
+    display: inline-block;
+    animation: inner-left-20 1s 1s ease both,
+      text-clip 1s 0s cubic-bezier(0.5, 0, 0.5, 4) both;
+  }
+  
+  .l-name {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+  
+
+  .f-name {
+      display: inline-block;
+  }
+
+  .f-name h1 {
+    display: inline-block;
+  }
+  
+  .l-name {
+    display: inline-block;
+  }
+
+
+
+
+
+@keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  
+  @keyframes outer-left {
+    from {
+      transform: translateX(70%);
+    }
+    to {
+      transform: none;
+    }
+  }
+  
+  @keyframes inner-left-50 {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: none;
+    }
+  }
+
+  @keyframes inner-left-20 {
+    from {
+      transform: translateX(150%);
+    }
+    to {
+      transform: none;
+    }
+  }
+
