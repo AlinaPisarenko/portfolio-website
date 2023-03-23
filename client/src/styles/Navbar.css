@@ -3,17 +3,23 @@
 .navbar {
     position: sticky;
     top:0;
+    z-index:100;
     height: 28vh;
     width: 20vw;
     margin-left: 4rem;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: transparent;
     color: var(--font-main);
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    mix-blend-mode:exclusion
+    mix-blend-mode:exclusion;
 
+
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 .navbar::after {
@@ -30,4 +36,13 @@ h4 {
     color: var(--font-main);
     font-size: 1.4rem;
  
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(100vw);
+      }
+      40% {
+        transform: none;
+  }
 }
