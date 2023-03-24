@@ -3,6 +3,8 @@ import '../styles/Footer.css'
 
 export default function Footer() {
   return (
-    <div className='footer'>Footer</div>
+    <div className='footer'>
+      <div className='line' id='line-footer'></div>
+    </div>
   )
 }

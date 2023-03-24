@@ -6,14 +6,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
- /* background-color: aqua; */
-     /* Create the parallax scrolling effect */
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .home-container {
@@ -24,20 +20,49 @@
     justify-content: space-between;
 }
 
-h1, h2 {
-    font-weight: 300;
-
-}
-
 h1 {
-    font-size: 15vw;
+    font-size: 14vw;
+    font-weight: 600;
     line-height: 1;
     width: min-content;
     letter-spacing: -0.5rem;
+    position: relative;
+}
+
+.f-name h1 {
+  display: flex!important;
+}
+
+#cap-letter {
+position: relative;
+}
+
+#cap-letter::after {
+  content: 'W';
+  position:absolute;
+  left:1vw;
+  /* bottom:4.5vh; */
+  z-index: -1;
+  /* right: 22rem; */
+  color: var(--secondary);
+  transition: all 0.1s ease-in-out;
+
+}
+
+#cap-letter:hover::after {
+  transform: scale(1.05) rotate(5deg);
+  left:1.4vw;
+}
+
+#low-letter {
+  
+
 }
 
 h2 {
+  
     font-size: 3vw;
+    font-weight: 400;
     align-self: end;
     letter-spacing: 0.1rem;
 }
@@ -68,7 +93,6 @@ h2 {
     animation: animate-top 1s linear;
     animation-fill-mode: forwards;     
 }
-
 
 #line-bottom {
     bottom: 7vh;
@@ -108,7 +132,6 @@ h2 {
 .l-name {
   animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
-
 
 .home-container {
     animation: outer-left 1s 1s ease both;

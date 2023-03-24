@@ -11,10 +11,10 @@ export default function Home() {
             <h2>ALINA PISARENKO</h2>
             <div className="home-container-inner">
                 <div className='f-name'>
-                    <h1>WEB</h1>
+                    <h1><span id='cap-letter'>W</span><span id='low-letter'>eb</span></h1>
                 </div>
                 <div className="l-name">
-                    <h1>DEVELOPER</h1>
+                    <h1>Developer</h1>
                 </div>
             </div> 
         </div>

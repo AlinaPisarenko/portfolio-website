@@ -1,8 +1,11 @@
 import React from 'react'
 import '../styles/Projects.css'
+import ProjectCard from './ProjectCard'
 
 export default function Projects() {
   return (
-    <div className='projects'>Projects</div>
+    <div id='projects' className='projects'>
+      <ProjectCard  />
+    </div>
   )
 }

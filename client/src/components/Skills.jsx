@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import '../styles/Skills.css'
-import { Rhv } from 'react-horizontal-vertical';
+
 
 export default function Skills({ position }) {
   const frontSkills = useRef(0);

@@ -1,1 +1,23 @@
 @import url("App.css");
+
+.footer {
+    background-color: var(--font-main);
+    color: var(--bg-main);
+    margin-top: auto;
+    height: 8vh;
+}
+
+#line-footer {  
+    background: var(--bg-main);
+}
+
+#line-footer::before { 
+    top: 0;
+    left: 0;
+    animation: animate-bottom 1s linear;
+    animation-fill-mode: forwards;    
+    background: var(--font-main);
+
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}

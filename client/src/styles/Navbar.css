@@ -17,7 +17,7 @@
     mix-blend-mode:exclusion;
 
 
-    animation: rotate 1s linear infinite;
+    animation: rotate 1s linear;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
 }
@@ -31,18 +31,57 @@ h4 {
     padding-bottom: 1rem;
 }
 
-.nav-link {
+/* .nav-link {
     text-decoration: none;
     color: var(--font-main);
-    font-size: 1.4rem;
+    
  
+} */
+
+
+
+.nav-link  {
+    width: max-content;
+    color: var(--font-main);
+    text-decoration: none;
+    font-size: 1.6rem;
+    position: relative;
+    /* transform: translate(-50%, -50%); */
+    background: transparent;
+    /* margin: 0 auto; */
+    transition: 0.3s;
+    padding: 4px 0; 
+    
+}
+   
+.nav-link::before {
+        content: '';
+        border-bottom: 1px solid var(--font-main);
+        padding: 0 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        transition: 0.3s;
+}
+        
+.nav-link:hover::before {
+        width: 100%;
+        padding: 0;
+}
+
+.nav-link:active {
+    background: var(--font-main);
+    color: var(--bg-main);
+    transition: 0.1s;
 }
 
 @keyframes rotate {
     0% {
         transform: translateX(100vw);
       }
-      40% {
+    27% {
         transform: none;
   }
 }

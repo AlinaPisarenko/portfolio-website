@@ -4,7 +4,16 @@
   /* --bg-main: #181f2a;
   --font-main:#df888f; */
   --bg-main: #4832d5;
+
+  /* --bg-main: #3f109d; */
   --font-main: #ccf281 ;
+
+  /* --bg-main: #7e46e8 ; */
+
+  /* --bg-main: #7e46e8  ;
+  --font-main: #e8fb64; */
+  --secondary: #f82cda;
+
 }
 
 *, *::before, *::after {
@@ -42,9 +51,39 @@ img, picture, video, canvas, svg {
 
 .App {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
 }
 
 .nav-skills-container {
   display: flex;
 }
+
+
+
+
+
+
+
+
+
+@keyframes scrolling {
+  0% {
+      top: 70%;
+      opacity: 0;
+      /* transform: translate(-30%, -50); */
+  }
+  50% {
+      opacity: 0;
+ 
+      /* transform: translate(-50%, -50%); */
+  }
+
+  100% {
+      opacity: 1;
+      top: 0;
+      /* transform: translate(-50%, -50%); */
+  }
+}
+
