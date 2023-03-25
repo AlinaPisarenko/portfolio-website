@@ -1,4 +1,4 @@
-@import url("App.css");
+/* @import url("App.css");
 
 .project-card {
     position: relative;
@@ -22,7 +22,7 @@
     font-size: 8rem;
     letter-spacing: -0.1rem;
     position: absolute;
-    /* top: 0%; */
+
     left: 50%;
     transform: translate(-50%, -120%);
     z-index: 100;
@@ -111,4 +111,26 @@
     100% {
         opacity: 1;
     }
-}
+} */
+
+
+.image {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+  }
+  
+  .animate {
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
