@@ -13,7 +13,7 @@ function App() {
   window.addEventListener('scroll', () => {
 
     let scroll_percent = window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-    
+
     setPosition(scroll_percent)
 
     document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
