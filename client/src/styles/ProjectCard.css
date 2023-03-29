@@ -1,47 +1,36 @@
-/* @import url("App.css");
+@import url("App.css");
 
 .project-card {
     position: relative;
-    height: 80vh;
+    /* height: 80vh; */
  
 }
 
 .project-card-img {
     width: 60rem;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fadeIn 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
+    transform: translate(-50%, -50%); */
+
 }
 
 .project-card-title {
     font-weight: 600;
     font-size: 8rem;
     letter-spacing: -0.1rem;
-    position: absolute;
-
-    left: 50%;
-    transform: translate(-50%, -120%);
-    z-index: 100;
-
-    animation: title-scroll 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
 }
 
 
-.project-card a {
+.project-link {
     color: var(--font-main);
     text-decoration: none;
     font-size: 2.4rem;
     position: absolute;
-    top: 85%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+
 
     background: transparent;
     border: none;
@@ -52,14 +41,11 @@
     transition: 0.3s;
     padding: 10px; 
 
-    animation: fadeIn 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
     
 }
 
 
-.project-card a::before {
+.project-link::before {
         content: '';
         border-bottom: 1px solid var(--font-main);
         padding: 0 10px;
@@ -72,47 +58,17 @@
         transition: 0.3s;
 }
         
-.project-card a:hover::before {
+.project-link:hover::before {
         width: 100%;
         padding: 0;
 }
 
-.project-card a:active {
+.project-link:active {
     background: var(--font-main);
     color: var(--bg-main);
     transition: 0.1s;
 }
         
-
-@keyframes title-scroll {
-    0% {
-        top: 70%;
-        opacity:0;
-    }
-    10% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-        top: 0;
-      
-    }
-}
-
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-} */
-
 
 .image {
     width: 50vw;

@@ -15,7 +15,7 @@ export default function ProjectCard({imageUrl, index, visibleIndices, refs}) {
             src={imageUrl}
             alt={`Image ${index}`}
       />
-      <a href='#'>open project</a>
+      <a className='project-link' href='#'>open project</a>
   </div>
   )
 }
