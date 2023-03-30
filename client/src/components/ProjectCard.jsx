@@ -11,6 +11,7 @@ export default function ProjectCard({imageUrl, index, visibleIndices, refs}) {
     <div className={`image ${visibleIndices.includes(index) ? 'animate' : ''}`}>
       <h5 className='project-card-title'>Project Title</h5>
       <img
+            className='project-card-img'
             ref={ref => refs.current[index] = ref}
             src={imageUrl}
             alt={`Image ${index}`}

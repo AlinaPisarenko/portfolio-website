@@ -3,10 +3,7 @@ import '../styles/Skills.css'
 
 
 export default function Skills({ position }) {
-  const frontSkills = useRef(0);
-
-
-
+  // const frontSkills = useRef(0);
 
   // if (position>0,  frontSkills.current.clientWidth) {
   //   console.log("position",position, typeof(position))
@@ -23,15 +20,11 @@ export default function Skills({ position }) {
   // }
 
 
-
   // style={{left: `${el_position}`}}
-
-
-
 
   return (
    
-    <div className='skills'>
+    <div id='skills' className='skills'>
 
       {/* <div ref={frontSkills} className='skills-bg'></div> */}
 

@@ -26,7 +26,7 @@ export default function Contact() {
     }, []);
 
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
       <div  className={`contact-links ${isVisible ? "visible-contact" : ""}`}>
         <div className='contact-link-wrap'>
             <a id='email' className='contact-link' href="mailto:pisarenko.alina@gmail.com" target="_blank">email</a>
