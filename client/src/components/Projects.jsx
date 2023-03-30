@@ -6,8 +6,10 @@ import ProjectCard from './ProjectCard'
 export default function Projects() {
   const images = [
     'public/art.png',
+    'public/jobhub.png',
     'public/game.png',
-    'public/house.png'
+    'public/house.png',
+    
   ];
 
   const refs = useRef(images.map(() => null));

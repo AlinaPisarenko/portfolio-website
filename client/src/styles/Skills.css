@@ -86,7 +86,7 @@
         transform: translateX(140%);
       }
       to {
-        transform: translateX(-260%);
+        transform: translateX(-580%);
   }
 }
 
@@ -96,17 +96,17 @@
         transform: translateX(-260%);
       }
       to {
-        transform: translateX(260%);
+        transform: translateX(680%);
   }
 }
 
 @keyframes scroll-skills-3 {
 
     from {
-        transform: translateX(120%);
+        transform: translateX(180%);
       }
       to {
-        transform: translateX(-210%);
+        transform: translateX(-680%);
   }
 }
 
@@ -116,17 +116,17 @@
         transform: translateX(-200%);
       }
       to {
-        transform: translateX(265%);
+        transform: translateX(580%);
   }
 }
 
 @keyframes scroll-skills-5 {
 
     from {
-        transform: translateX(100%);
+        transform: translateX(200%);
       }
       to {
-        transform: translateX(-190%);
+        transform: translateX(-700%);
   }
 }
 

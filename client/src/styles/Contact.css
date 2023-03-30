@@ -5,10 +5,12 @@
     background-color: var(--font-main);
     color: var(--bg-main);
     height: 100vh;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-between; */
+    position: relative;
+    width: 100vw;
 }
 
 .contact-title {  
@@ -18,6 +20,10 @@
     letter-spacing: -0.5rem;
     line-height: 1;
     text-align: end;
+    position: absolute;
+    /* left: 47vw; */
+    bottom: 6vh;
+    right: -100%;
 }
 
 .contact-links {
@@ -25,6 +31,10 @@
     flex-direction: column;
     gap: 2rem;
     padding-top: 6rem;
+    align-items: flex-end;
+    position: absolute;
+    right: 4%;
+    opacity: 0;
 }
 
 .contact-link-wrap {
@@ -34,7 +44,7 @@
     text-align: center;
     padding: 0 3rem;
     overflow-y: hidden;
-    width: auto;
+    width: min-content;
     white-space: nowrap
 }
 
@@ -45,14 +55,53 @@
     font-weight: 400;
     display: block;
     width: 100%;
-    transform: translateX(0%); 
-    animation: move 8s linear infinite
+    transform: translateX(0%);   
+}
+
+.contact-link::after {
+    position: absolute;
+    top: 0;
+    left: 125%;
+}
+
+#email::after {
+    content: 'email';
+}
+
+#linkedin::after {
+    content: 'linkedin';
+}
+
+#github::after {
+    content: 'github';
 }
 
 .contact-link:hover {
-    /* transform: translateX(-50%); */  
+    animation: move 3s linear infinite
+}
+  
+.visible-title {
+    animation: animate-bottom-text 1s linear;
+    animation-fill-mode: forwards;   
+}
+
+.visible-contact {
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+  @keyframes animate-bottom-text {
+    0% {
+       right: -100%;
+    }
+
+    100% {
+        right: 4%;
+    }
 }
 
 @keyframes move {
-    to { transform: translateX(-100%); }
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-135%); }
+    100% { transform: translateX(0); }
   }

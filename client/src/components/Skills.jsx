@@ -36,7 +36,7 @@ export default function Skills({ position }) {
       {/* <div ref={frontSkills} className='skills-bg'></div> */}
 
         <div className='skills-front' id='skills-1' >
-          <div>javacript</div>
+          <div>javascript</div>
           <div>react</div>
           <div>redux</div>
         </div>
@@ -44,7 +44,7 @@ export default function Skills({ position }) {
           <div>html3</div>
           <div>css</div>
           <div>scss</div>
-          
+          <div>figma</div>
         </div>
         <div className='skills-front' id='skills-3' >
           <div>bootstrap</div>

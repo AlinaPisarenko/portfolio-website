@@ -27,6 +27,10 @@ h1 {
     width: min-content;
     letter-spacing: -0.5rem;
     position: relative;
+    display: flex;
+    overflow: visible;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
 }
 
 .f-name h1 {
@@ -41,12 +45,9 @@ position: relative;
   content: 'W';
   position:absolute;
   left:1vw;
-  /* bottom:4.5vh; */
   z-index: -1;
-  /* right: 22rem; */
   color: var(--secondary);
   transition: all 0.1s ease-in-out;
-
 }
 
 #cap-letter:hover::after {
@@ -54,17 +55,24 @@ position: relative;
   left:1.4vw;
 }
 
-#low-letter {
+.low-letter {
   
 
 }
 
-h2 {
+.low-letter:hover {
+  transform: rotate(5deg) scale(1.1);
+  text-shadow: 6px 6px 15px var(--secondary);
   
-    font-size: 3vw;
-    font-weight: 400;
+}
+
+h2 {
+    text-align: right;
+    font-size: 2.4vw;
+    font-weight: 600;
     align-self: end;
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0rem; */
+    line-height: 1;
 }
 
 .line {

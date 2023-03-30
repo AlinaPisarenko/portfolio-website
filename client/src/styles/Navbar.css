@@ -2,12 +2,12 @@
 
 .navbar {
     position: sticky;
-    top:0;
+    top:2rem;
     z-index:100;
     height: 28vh;
     width: 20vw;
     margin-left: 4rem;
-    padding-top: 2rem;
+    margin-top: -2rem;
     padding-bottom: 2rem;
     background-color: transparent;
     color: var(--font-main);
@@ -27,28 +27,17 @@
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding-bottom: 1rem;
 }
-
-/* .nav-link {
-    text-decoration: none;
-    color: var(--font-main);
-    
- 
-} */
-
-
 
 .nav-link  {
     width: max-content;
     color: var(--font-main);
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 2rem;
     position: relative;
-    /* transform: translate(-50%, -50%); */
     background: transparent;
-    /* margin: 0 auto; */
     transition: 0.3s;
     padding: 4px 0; 
     
@@ -81,7 +70,7 @@ h4 {
     0% {
         transform: translateX(100vw);
       }
-    27% {
+    15% {
         transform: none;
   }
 }

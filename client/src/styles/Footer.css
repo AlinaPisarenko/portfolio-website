@@ -22,7 +22,6 @@
     position: absolute;
     left: 0;
     background: var(--bg-main);
-    transition: opacity 0.5s ease-out;
   }
   
   .is-visible {
