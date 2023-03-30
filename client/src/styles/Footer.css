@@ -7,17 +7,35 @@
     height: 8vh;
 }
 
-#line-footer {  
-    background: var(--bg-main);
-}
 
-#line-footer::before { 
+.line-footer::before { 
     top: 0;
     left: 0;
-    animation: animate-bottom 1s linear;
-    animation-fill-mode: forwards;    
+    position: absolute;
     background: var(--font-main);
+}
 
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
+
+.line-footer {
+    width: 85vw;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    background: var(--bg-main);
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .is-visible {
+    animation: animate-bottom-f 1s linear;
+    animation-fill-mode: forwards;   
+  }
+
+  @keyframes animate-bottom-f {
+    0% {
+       left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
 }

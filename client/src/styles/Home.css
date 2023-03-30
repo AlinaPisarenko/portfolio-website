@@ -180,7 +180,7 @@ h2 {
   
   @keyframes outer-left {
     from {
-      transform: translateX(70%);
+      transform: translateX(75%);
     }
     to {
       transform: none;
@@ -198,7 +198,7 @@ h2 {
 
   @keyframes inner-left-20 {
     from {
-      transform: translateX(150%);
+      transform: translateX(120%);
     }
     to {
       transform: none;
