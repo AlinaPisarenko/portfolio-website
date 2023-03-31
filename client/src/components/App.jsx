@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/App.css'
 import Footer from './Footer'
 import Home from './Home'
@@ -9,6 +9,19 @@ import Contact from './Contact'
 
 function App() {
   const [position, setPosition] = useState(null)
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    const loadPost = async () => {
+
+        const response = await fetch('http://127.0.0.1:5555/projects')
+        const res = await response.json();
+        console.log(res)
+        setProjects(response.data);
+    }
+
+    loadPost();
+  }, []);
 
   window.addEventListener('scroll', () => {
 
