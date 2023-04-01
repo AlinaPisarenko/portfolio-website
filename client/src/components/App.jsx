@@ -16,7 +16,6 @@ function App() {
 
         const response = await fetch('http://127.0.0.1:5555/projects')
         const res = await response.json();
-        console.log(res)
         setProjects(response.data);
     }
 
@@ -38,7 +37,7 @@ function App() {
       <Home /> 
       <Navbar />
       <Skills position={position}/>
-      <Projects />
+      <Projects projects={projects} />
       <Contact />
       <Footer />
     </div>

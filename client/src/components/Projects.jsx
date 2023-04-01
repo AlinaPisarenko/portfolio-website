@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import '../styles/Projects.css'
 import ProjectCard from './ProjectCard'
 
-export default function Projects() {
+export default function Projects({ projects }) {
   const images = [
     'public/art.png',
     'public/jobhub.png',
@@ -12,7 +12,7 @@ export default function Projects() {
     
   ];
 
-  const refs = useRef(images.map(() => null));
+  const refs = useRef(projects?.map(() => null));
   const [visibleIndices, setVisibleIndices] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,8 @@ export default function Projects() {
       const newVisibleIndices = refs.current
         .map((ref, index) => {
           if (ref) {
-            const { top, bottom } = ref.getBoundingClientRect();
+            console.log(ref)
+            const { top, bottom } = ref.image.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
             if (top < windowHeight && bottom >= 0) {
@@ -43,8 +44,8 @@ export default function Projects() {
   return (
     <div id='projects' className='projects'>
     
-      {images.map((imageUrl, index) => (
-      <ProjectCard key={index} imageUrl={imageUrl} index={index} refs={refs}  visibleIndices={visibleIndices}/>
+      {projects?.map((project, index) => (
+      <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
     ))}
     </div>
   )
