@@ -14,9 +14,9 @@ function App() {
   useEffect(() => {
     const loadPost = async () => {
 
-        const response = await fetch('http://127.0.0.1:5555/projects')
-        const res = await response.json();
-        setProjects(response.data);
+        const req = await fetch('http://127.0.0.1:5555/projects')
+        const res = await req.json();
+        setProjects(res);
     }
 
     loadPost();

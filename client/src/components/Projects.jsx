@@ -14,14 +14,16 @@ export default function Projects({ projects }) {
 
   const refs = useRef(projects?.map(() => null));
   const [visibleIndices, setVisibleIndices] = useState([]);
+  console.log(projects)
 
   useEffect(() => {
     const onScroll = () => {
+      console.log(refs.current)
       const newVisibleIndices = refs.current
         .map((ref, index) => {
           if (ref) {
             console.log(ref)
-            const { top, bottom } = ref.image.getBoundingClientRect();
+            const { top, bottom } = ref.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
             if (top < windowHeight && bottom >= 0) {
@@ -44,7 +46,7 @@ export default function Projects({ projects }) {
   return (
     <div id='projects' className='projects'>
     
-      {projects?.map((project, index) => (
+      {projects.map((project, index) => (
       <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
     ))}
     </div>
