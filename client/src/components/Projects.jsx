@@ -3,11 +3,10 @@ import { useRef, useEffect, useState } from 'react';
 import '../styles/Projects.css'
 import ProjectCard from './ProjectCard'
 
-const titles = ['Title 1', 'Title 2', 'Title 3'];
 
 export default function Projects({ projects }) {
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const refArray = useRef([]);
   // const [titleOffset, setTitleOffset] = useState(0);
 
@@ -75,6 +74,7 @@ export default function Projects({ projects }) {
 
   return (
     <div id='projects' className='projects'>
+      <h3>My Work</h3>
      {/* {titles.map((title, index) => (
           <div
             key={index}
@@ -95,34 +95,43 @@ export default function Projects({ projects }) {
            </div>
       ))} */}
 
-{projects.map((project,index) => (
-  <>
+{/* {projects.map((project,index) => (
              <div
              key={index}
              className={`content-title ${activeIndex === index ? 'active' : ''}`}
-             ref={ref => refArray.current[index] = ref}
+            //  ref={ref => refArray.current[index] = ref}
           
            >
-             {project.title}
-           </div>
-               <a  className='project-link' href={project.link} target='_blank'>open project</a>
-               </>
-      ))}
+            <h4>{project.title}</h4>
+             
+            <a className='demo-link' href={project.link} target='_blank'>open project</a>
+           </div>     
+      ))} */}
     
     
       {projects.map((project, index) => {
 
         return (
-        //   <div>
-        //   <div
-        //   key={index}
-        //   className={`content-title ${activeIndex === index ? 'active' : ''}`}
+          <div>
+            <div
+             key={index}
+             className={`content-title ${activeIndex === index ? 'active' : ''}`}
+            //  ref={ref => refArray.current[index] = ref}
+          
+           >
+            <h4>{project.title}</h4>
+             
+            <a className='project-link' href={project.link} target='_blank'>open project</a>
+           </div> 
+          {/* <div
+          key={index}
+          className={`content-title ${activeIndex === index ? 'active' : ''}`}
        
-        // >
-        //   {project.title}
-        // </div>
-          <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
-          // </div>
+        >
+          {project.title}
+        </div> */}
+            <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
+          </div>
         )
       })}
     </div>

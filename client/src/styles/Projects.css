@@ -15,17 +15,23 @@
 
 
 .content-title {
-    font-size: 10rem;
-    font-weight: 600;
+  
     margin-top: 0;
     text-align: center;
     position: sticky;
     top: 50%;
     /* height: 50vh; */
     transform: translateY(0);
-
+    z-index: 900;
     opacity: 0;
   }
+
+  .content-title h4 {
+    font-size: 10rem;
+    font-weight: 600;
+    padding-bottom: 8rem;
+  }
+
 
 
 @keyframes title-animation {
