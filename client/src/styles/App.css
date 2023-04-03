@@ -95,7 +95,7 @@ img, picture, video, canvas, svg {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(80px);
   }
   100% {
     opacity: 1;

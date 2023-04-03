@@ -8,5 +8,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4rem;
     padding-bottom: 6rem;
 }
+
+
+
+.content-title {
+    font-size: 10rem;
+    font-weight: 600;
+    margin-top: 0;
+    text-align: center;
+    position: sticky;
+    top: 50%;
+    /* height: 50vh; */
+    transform: translateY(0);
+
+    opacity: 0;
+  }
+
+
+@keyframes title-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(70%) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .active {
+    opacity: 1;
+    animation: title-animation 0.5s ease-in-out;
+  }
