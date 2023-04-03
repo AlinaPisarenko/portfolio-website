@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard'
 
 export default function Projects({ projects }) {
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const refArray = useRef([]);
   // const [titleOffset, setTitleOffset] = useState(0);
 
