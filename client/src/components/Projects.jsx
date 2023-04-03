@@ -3,23 +3,8 @@ import { useRef, useEffect, useState } from 'react';
 import '../styles/Projects.css'
 import ProjectCard from './ProjectCard'
 
-<<<<<<< HEAD
-
 export default function Projects({ projects }) {
 
-  const [activeIndex, setActiveIndex] = useState(null);
-  const refArray = useRef([]);
-  // const [titleOffset, setTitleOffset] = useState(0);
-=======
-export default function Projects({ projects }) {
-  const images = [
-    'public/art.png',
-    'public/jobhub.png',
-    'public/game.png',
-    'public/house.png',
-    
-  ];
->>>>>>> parent of a614b31 (implemented parralax scroll for title/image)
 
   const refs = useRef(projects?.map(() => null));
   const [visibleIndices, setVisibleIndices] = useState([]);
@@ -54,73 +39,10 @@ export default function Projects({ projects }) {
     }, []);
   return (
     <div id='projects' className='projects'>
-<<<<<<< HEAD
-      <h3>My Work</h3>
-     {/* {titles.map((title, index) => (
-          <div
-            key={index}
-            className={`content-title ${activeIndex === index ? 'active' : ''}`}
-         
-          >
-            {title}
-          </div>
-        ))} */}
-      {/* {projects.map(project => project.title).map((title, index) => (
-             <div
-             key={index}
-             className={`content-title ${activeIndex === index ? 'active' : ''}`}
-             ref={ref => refArray.current[index] = ref}
-          
-           >
-             {title}
-           </div>
-      ))} */}
-
-{/* {projects.map((project,index) => (
-             <div
-             key={index}
-             className={`content-title ${activeIndex === index ? 'active' : ''}`}
-            //  ref={ref => refArray.current[index] = ref}
-          
-           >
-            <h4>{project.title}</h4>
-             
-            <a className='demo-link' href={project.link} target='_blank'>open project</a>
-           </div>     
-      ))} */}
-    
-    
-      {projects.map((project, index) => {
-
-        return (
-          <div>
-            <div
-             key={index}
-             className={`content-title ${activeIndex === index ? 'active' : ''}`}
-            //  ref={ref => refArray.current[index] = ref}
-          
-           >
-            <h4>{project.title}</h4>
-             
-            <a className='project-link' href={project.link} target='_blank'>open project</a>
-           </div> 
-          {/* <div
-          key={index}
-          className={`content-title ${activeIndex === index ? 'active' : ''}`}
-       
-        >
-          {project.title}
-        </div> */}
-            <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
-          </div>
-        )
-      })}
-=======
     
       {projects.map((project, index) => (
       <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
     ))}
->>>>>>> parent of a614b31 (implemented parralax scroll for title/image)
     </div>
   )
 }
