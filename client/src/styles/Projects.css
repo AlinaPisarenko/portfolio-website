@@ -9,44 +9,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 4rem;
-    padding-bottom: 6rem; */
-    position: relative;
+    padding-bottom: 6rem;
 }
-
-.projects h4 {
-    font-size: 2.4rem;
-}
-
-.content-title {
-  
-    margin-top: 0;
-    text-align: center;
-    position: sticky;
-    top: 0%;
-    /* height: 50vh; */
-    transform: translateY(0);
-    z-index: 900;
-    opacity: 0;
-  }
-
-  .content-title h4 {
-    font-size: 10rem;
-    font-weight: 600;
-    padding-bottom: 8rem;
-  }
-
-
-
-@keyframes title-animation {
-    0% {
-      opacity: 0;
-      transform: translateY(70%) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-
- 

@@ -3,27 +3,39 @@ import { useRef, useEffect, useState } from 'react';
 import '../styles/Projects.css'
 import ProjectCard from './ProjectCard'
 
+<<<<<<< HEAD
 
 export default function Projects({ projects }) {
 
   const [activeIndex, setActiveIndex] = useState(null);
   const refArray = useRef([]);
   // const [titleOffset, setTitleOffset] = useState(0);
+=======
+export default function Projects({ projects }) {
+  const images = [
+    'public/art.png',
+    'public/jobhub.png',
+    'public/game.png',
+    'public/house.png',
+    
+  ];
+>>>>>>> parent of a614b31 (implemented parralax scroll for title/image)
 
   const refs = useRef(projects?.map(() => null));
   const [visibleIndices, setVisibleIndices] = useState([]);
+  console.log(projects)
 
   useEffect(() => {
     const onScroll = () => {
-      
+      console.log(refs.current)
       const newVisibleIndices = refs.current
         .map((ref, index) => {
           if (ref) {
+            console.log(ref)
             const { top, bottom } = ref.getBoundingClientRect();
             const windowHeight = window.innerHeight;
- 
+
             if (top < windowHeight && bottom >= 0) {
-              setActiveIndex(index);
               return index;
             }
           }
@@ -32,9 +44,6 @@ export default function Projects({ projects }) {
         .filter(index => index !== null);
 
       setVisibleIndices(newVisibleIndices);
-
-      // setTitleOffset(window.innerHeight / 2);
-
     };
 
     window.addEventListener('scroll', onScroll);
@@ -43,37 +52,9 @@ export default function Projects({ projects }) {
         window.removeEventListener('scroll', onScroll);
       };
     }, []);
-
-
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     let closestComponentIndex = 0;
-  //     let closestDistance = Number.MAX_VALUE;
-  
-  //     refArray.current.forEach((ref, index) => {
-  //       const distance = Math.abs(ref.getBoundingClientRect().top - titleOffset);
-  //       if (distance < closestDistance) {
-  //         closestDistance = distance;
-  //         closestComponentIndex = index;
-  //       }
-  //     });
-  //     setActiveIndex(closestComponentIndex);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [titleOffset]);
-
-
-
-
-
   return (
     <div id='projects' className='projects'>
+<<<<<<< HEAD
       <h3>My Work</h3>
      {/* {titles.map((title, index) => (
           <div
@@ -134,6 +115,12 @@ export default function Projects({ projects }) {
           </div>
         )
       })}
+=======
+    
+      {projects.map((project, index) => (
+      <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
+    ))}
+>>>>>>> parent of a614b31 (implemented parralax scroll for title/image)
     </div>
   )
 }
