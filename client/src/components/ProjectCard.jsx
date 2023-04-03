@@ -11,14 +11,14 @@ console.log(refs)
     <div 
     ref={ref => refs.current[index] = ref}
     className={`image ${visibleIndices.includes(index) ? 'animate' : ''}`}>
-      <h5 className='project-card-title'>{project.title}</h5>
+      {/* <h5 className='project-card-title'>{project.title}</h5> */}
       <img
             className='project-card-img'
             
             src={project.image}
             alt={`Image for ${project.title} project`}
       />
-      <a className='project-link' href={project.link} target='_blank'>open project</a>
+      {/* <a className='project-link' href={project.link} target='_blank'>open project</a> */}
   </div>
   )
 }

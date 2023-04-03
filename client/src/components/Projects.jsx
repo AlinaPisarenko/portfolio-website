@@ -7,13 +7,13 @@ const titles = ['Title 1', 'Title 2', 'Title 3'];
 
 export default function Projects({ projects }) {
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const refArray = useRef([]);
   // const [titleOffset, setTitleOffset] = useState(0);
 
   const refs = useRef(projects?.map(() => null));
   const [visibleIndices, setVisibleIndices] = useState([]);
-  console.log(projects)
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -26,6 +26,7 @@ export default function Projects({ projects }) {
             const windowHeight = window.innerHeight;
 
             if (top < windowHeight && bottom >= 0) {
+              setActiveIndex(index)
               return index;
             }
           }
@@ -65,7 +66,7 @@ export default function Projects({ projects }) {
       ))} */}
 
 {projects.map((project,index) => (
-  <>
+
              <div
              key={index}
              className={`content-title ${activeIndex === index ? 'active' : ''}`}
@@ -73,9 +74,10 @@ export default function Projects({ projects }) {
           
            >
              {project.title}
+             <a  className='project-link' href={project.link} target='_blank'>open project</a>
            </div>
-               <a  className='project-link' href={project.link} target='_blank'>open project</a>
-               </>
+              
+     
       ))}
     
     
