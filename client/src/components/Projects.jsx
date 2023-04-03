@@ -3,29 +3,29 @@ import { useRef, useEffect, useState } from 'react';
 import '../styles/Projects.css'
 import ProjectCard from './ProjectCard'
 
-const titles = ['Title 1', 'Title 2', 'Title 3'];
+
 
 export default function Projects({ projects }) {
 
   const [activeIndex, setActiveIndex] = useState(null);
-  const refArray = useRef([]);
+  // const refArray = useRef([]);
   // const [titleOffset, setTitleOffset] = useState(0);
 
   const refs = useRef(projects?.map(() => null));
   const [visibleIndices, setVisibleIndices] = useState([]);
 
-
+  console.log(activeIndex)
   useEffect(() => {
     const onScroll = () => {
       console.log(refs.current)
       const newVisibleIndices = refs.current
         .map((ref, index) => {
           if (ref) {
-            console.log(ref)
             const { top, bottom } = ref.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
             if (top < windowHeight && bottom >= 0) {
+              
               setActiveIndex(index)
               return index;
             }
@@ -67,15 +67,20 @@ export default function Projects({ projects }) {
 
 {projects.map((project,index) => (
 
-             <div
-             key={index}
-             className={`content-title ${activeIndex === index ? 'active' : ''}`}
-             ref={ref => refArray.current[index] = ref}
-          
-           >
-             {project.title}
-             <a  className='project-link' href={project.link} target='_blank'>open project</a>
-           </div>
+          <div
+            key={index}
+            className={`content-title ${activeIndex === index ? 'active' : ''}`}
+            //  ref={ref => refArray.current[index] = ref}
+          >
+              <div className='active-wrap'>
+                <p className={`content-title ${activeIndex === index ? 'active-1' : ''}`}>
+                {project.title}
+                </p>
+              </div>
+             {/* <p className='project-link'>{project.link}</p> */}
+              <a  className={`project-link ${activeIndex === index ? 'display' : ''}`} href={project.link} target='_blank'>open project</a>
+            
+          </div>
               
      
       ))}
@@ -84,16 +89,17 @@ export default function Projects({ projects }) {
       {projects.map((project, index) => {
 
         return (
-        //   <div>
-        //   <div
-        //   key={index}
-        //   className={`content-title ${activeIndex === index ? 'active' : ''}`}
+          <div>
+          {/* <div
+          key={index}
+          className={`content-title ${activeIndex === index ? 'active' : ''}`}
        
-        // >
-        //   {project.title}
-        // </div>
+        >
+          {project.title}
+        </div> */}
           <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
-          // </div>
+          {/* <a  className='project-link' href={project.link} target='_blank'>open project</a> */}
+          </div>
         )
       })}
     </div>

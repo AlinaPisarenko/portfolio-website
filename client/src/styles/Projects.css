@@ -21,9 +21,9 @@
     margin-top: 0;
     text-align: center;
     position: sticky;
-    top: 50%;
+    top: 40%;
     /* height: 50vh; */
-    transform: translateY(0);
+    /* transform: translateY(0); */
 
     opacity: 0;
     z-index: 1000;
@@ -32,16 +32,39 @@
 
 @keyframes title-animation {
     0% {
-      opacity: 0;
-      transform: translateY(70%) scale(0.9);
+      /* opacity: 0; */
+      transform: translateY(70%) 
+      /* scale(0.9); */
     }
     100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+      /* opacity: 1; */
+      transform: translateY(0) 
+      /* scale(1); */
     }
   }
 
   .active {
     opacity: 1;
+  }
+
+  .active-wrap {
+    overflow-y: hidden;
+    height: 14rem;
+    width: 100%;
+  
+  }
+  
+  .content-title {
+    /* animation: title-animation 0.5s ease-in-out; */
+
+  }
+
+  .active-1 {
+    opacity: 1;
     animation: title-animation 0.5s ease-in-out;
+  }
+
+
+  .display {
+    display: block!important;
   }

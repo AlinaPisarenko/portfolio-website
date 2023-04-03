@@ -5,7 +5,7 @@ import { useRef, useEffect, useState } from 'react';
 
 export default function ProjectCard({project, index, visibleIndices, refs}) {
 
-console.log(refs)
+
 
   return (
     <div 
