@@ -5,11 +5,11 @@ import ProjectCard from './ProjectCard'
 
 
 export default function Projects({ projects }) {
-  const [hover, setHover] = useState(false)
+
   const [activeIndex, setActiveIndex] = useState(null);
   // const refArray = useRef([]);
-  // const [titleOffset, setTitleOffset] = useState(0);
-
+  const [currentProject, setCurrentProject] = useState(null);
+  const [hover, setHover] = useState(false)
   const refs = useRef(projects?.map(() => null));
   const projectRef = useRef(null)
   const [visibleIndices, setVisibleIndices] = useState([]);
@@ -51,8 +51,8 @@ export default function Projects({ projects }) {
 const handleHover = (project) => {
   console.log('active index', activeIndex)
   console.log('curr ref', refs.current[activeIndex])
-  if (project.id === activeIndex+1) setHover(!hover)
-  
+  setHover(!hover)
+  setCurrentProject(activeIndex)
 }
 
   return (
@@ -79,15 +79,17 @@ const handleHover = (project) => {
    
       {projects.map((project, index) => {
         return (
-          <div className={`${hover ? 'hover-img' : ''}`}>
+    
           <ProjectCard 
             key={project.id} 
             project={project} 
             index={index} 
             refs={refs} 
+            currentProject={currentProject}
             hover={hover} 
+            // setHover={setHover}
             visibleIndices={visibleIndices} />
-            </div>
+     
         )
       })}
     
