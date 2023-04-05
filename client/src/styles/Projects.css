@@ -24,6 +24,7 @@
     font-size: 10rem;
     font-weight: 600;
     margin-top: 0rem;
+    margin-top: 2rem;
     text-align: center;
     position: sticky;
     top: 40%;
@@ -57,9 +58,6 @@
   
   }
   
-  .content-title {
-    /* animation: title-animation 0.5s ease-in-out; */
-  }
 
   .active-1 {
     opacity: 1;

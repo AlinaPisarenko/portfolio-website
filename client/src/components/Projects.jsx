@@ -17,21 +17,13 @@ export default function Projects({ projects }) {
 
 
 
+ // testing intersection observer
   const [isVisible, setIsVisible] = useState(false)
-  const [project, setProject] = useState(false)
-
+  
   const displayLine = (entries) => {
     console.log(entries)
     const [ entry ] = entries
     setIsVisible(entry.isIntersecting)
-  }
-
-  const displayProject = (entries) => {
-    console.log(entries)
-    const [ entry ] = entries
-    setIsVisible(entry.isIntersecting)
-
-
   }
 
   const options = {
@@ -40,10 +32,7 @@ export default function Projects({ projects }) {
     threshold: 0.1,
   };
 
-
-  //test
   useEffect(() => {
-
     const observer = new IntersectionObserver(displayLine, options);
     if (projectRef.current) observer.observe(projectRef.current);
 
@@ -64,7 +53,7 @@ export default function Projects({ projects }) {
   useEffect(() => {
     const onScroll = () => {
       const  divBottom  = projectRef.current.getBoundingClientRect().bottom;
-   
+    
 
       const newVisibleIndices = refs.current
         .map((ref, index) => {
@@ -77,9 +66,10 @@ export default function Projects({ projects }) {
               if (top < windowHeight/1.2) {
                 setActiveIndex(index)
               }
-              if (divBottom < windowHeight/1.3 ) {
+              if (divBottom < windowHeight ) {
                 setActiveIndex(null)
               }
+              
               return index;
             }
           }
@@ -113,18 +103,18 @@ const handleHover = () => {
       {projects.map((project,index) => (
             <div
               key={index}
-              className={`content-title ${activeIndex === index ? 'active' : ''}`}
+              className={`content-title ${activeIndex === index && isVisible ? 'active' : ''}`}
               //  ref={ref => refArray.current[index] = ref}
             >
                 <div className='active-wrap'>
-                  <p className={` ${activeIndex === index ? 'active-1' : ''}`}>
+                  <p className={` ${activeIndex === index && isVisible ? 'active-1' : ''}`}>
                   {project.title}
                   </p>
                 </div>
                 <a 
                 onMouseEnter={handleHover} 
                 onMouseLeave={handleHover} 
-                className={`project-link ${activeIndex === index ? 'display' : ''}`} 
+                className={`project-link ${activeIndex === index && isVisible ? 'display' : ''}`} 
                 href={project.link} 
                 target='_blank'>open project</a>
             </div>
