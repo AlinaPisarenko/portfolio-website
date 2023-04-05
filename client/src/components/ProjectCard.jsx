@@ -6,7 +6,6 @@ import { useRef, useEffect, useState } from 'react';
 export default function ProjectCard({project, index, visibleIndices, refs, currentProject, hover}) {
 
 
-
   return (
     <div 
     ref={ref => refs.current[index] = ref}
@@ -17,6 +16,7 @@ export default function ProjectCard({project, index, visibleIndices, refs, curre
               `}>
       <img
             className={`project-card-img ${project.id}`}
+            // src='/jobhub.png'
             src={project.image}
             alt={`Image for ${project.title} project`}
       />

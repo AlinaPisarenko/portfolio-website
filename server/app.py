@@ -2,7 +2,10 @@ from flask import Flask, make_response, jsonify
 from flask_cors import CORS
 from database import load_projects_from_db
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='../client/dist',
+            template_folder='../client/dist')
 
 CORS(app)
 
