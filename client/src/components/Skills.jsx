@@ -32,6 +32,7 @@ export default function Skills({ position }) {
           <div>javascript</div>
           <div>react</div>
           <div>redux</div>
+          <div>typescript</div>
         </div>
         <div className='skills-front' id='skills-2' >
           <div>html3</div>

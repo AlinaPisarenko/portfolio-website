@@ -3,22 +3,23 @@ import '../styles/ProjectCard.css'
 import { useRef, useEffect, useState } from 'react';
 
 
-export default function ProjectCard({project, index, visibleIndices, refs}) {
+export default function ProjectCard({project, index, visibleIndices, refs, hover}) {
 
 
 
   return (
     <div 
     ref={ref => refs.current[index] = ref}
-    className={`image ${visibleIndices.includes(index) ? 'animate' : ''}`}>
-      {/* <h5 className='project-card-title'>{project.title}</h5> */}
+     name={project.id}
+    className={`image 
+                ${visibleIndices.includes(index) ? 'animate' : ''}
+               
+              `}>
       <img
-            className='project-card-img'
-            
+            className={`project-card-img ${project.id}`}
             src={project.image}
             alt={`Image for ${project.title} project`}
       />
-      {/* <a className='project-link' href={project.link} target='_blank'>open project</a> */}
   </div>
   )
 }

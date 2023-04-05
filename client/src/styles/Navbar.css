@@ -1,6 +1,7 @@
 @import url("App.css");
 
 .navbar {
+    font-family: 'Poppins', sans-serif;
     position: sticky;
     top:2rem;
     z-index:100;
@@ -14,9 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    mix-blend-mode:exclusion;
-
-
+    mix-blend-mode: difference;
     animation: rotate 1s linear;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
@@ -40,6 +39,7 @@ h4 {
     background: transparent;
     transition: 0.3s;
     padding: 4px 0; 
+   
     
 }
    
@@ -58,6 +58,7 @@ h4 {
 .nav-link:hover::before {
         width: 100%;
         padding: 0;
+        cursor: pointer;
 }
 
 .nav-link:active {

@@ -1,6 +1,7 @@
 @import url("App.css");
 
 .skills {
+  font-family: 'Poppins', sans-serif;
     height: 106vh;
     background-color: var(--font-main);
     color: var(--bg-main);
@@ -68,7 +69,7 @@
         transform: translateX(140%);
       }
       to {
-        transform: translateX(-580%);
+        transform: translateX(-500%);
   }
 }
 

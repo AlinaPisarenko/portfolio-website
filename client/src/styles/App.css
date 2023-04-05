@@ -3,16 +3,21 @@
   --font-main: #f2c4b8; */
   /* --bg-main: #181f2a;
   --font-main:#df888f; */
-  --bg-main: #4832d5;
+
+  /* --bg-main: #4832d5; */
 
   /* --bg-main: #3f109d; */
-  --font-main: #ccf281 ;
+  /* --font-main: #ccf281 ; */
 
   /* --bg-main: #7e46e8 ; */
 
   /* --bg-main: #7e46e8  ;
   --font-main: #e8fb64; */
-  --secondary: #f82cda;
+  /* --secondary: #f82cda; */
+
+  --bg-main: #1F1F1F;
+  --font-main: #FE93AD;
+  --secondary: #FDFEFB
 
 }
 
@@ -35,7 +40,8 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-main);
   color: var(--font-main);
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Antonio', sans-serif;
   font-weight: 300;
 }
 

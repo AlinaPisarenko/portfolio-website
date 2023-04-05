@@ -4,20 +4,19 @@ import '../styles/Projects.css'
 import ProjectCard from './ProjectCard'
 
 
-
 export default function Projects({ projects }) {
-
+  const [hover, setHover] = useState(false)
   const [activeIndex, setActiveIndex] = useState(null);
   // const refArray = useRef([]);
   // const [titleOffset, setTitleOffset] = useState(0);
 
   const refs = useRef(projects?.map(() => null));
+  const projectRef = useRef(null)
   const [visibleIndices, setVisibleIndices] = useState([]);
 
-  console.log(activeIndex)
   useEffect(() => {
     const onScroll = () => {
-      console.log(refs.current)
+      const  divBottom  = projectRef.current.getBoundingClientRect().bottom;
       const newVisibleIndices = refs.current
         .map((ref, index) => {
           if (ref) {
@@ -26,7 +25,12 @@ export default function Projects({ projects }) {
 
             if (top < windowHeight && bottom >= 0) {
               
-              setActiveIndex(index)
+              if (top < windowHeight/2) {
+                setActiveIndex(index)
+              }
+              if (divBottom < windowHeight/1.3) {
+                setActiveIndex(null)
+              }
               return index;
             }
           }
@@ -43,65 +47,50 @@ export default function Projects({ projects }) {
         window.removeEventListener('scroll', onScroll);
       };
     }, []);
+
+const handleHover = (project) => {
+  console.log('active index', activeIndex)
+  console.log('curr ref', refs.current[activeIndex])
+  if (project.id === activeIndex+1) setHover(!hover)
+  
+}
+
   return (
-    <div id='projects' className='projects'>
-     {/* {titles.map((title, index) => (
-          <div
-            key={index}
-            className={`content-title ${activeIndex === index ? 'active' : ''}`}
-         
-          >
-            {title}
-          </div>
-        ))} */}
-      {/* {projects.map(project => project.title).map((title, index) => (
-             <div
-             key={index}
-             className={`content-title ${activeIndex === index ? 'active' : ''}`}
-             ref={ref => refArray.current[index] = ref}
-          
-           >
-             {title}
-           </div>
-      ))} */}
-
-{projects.map((project,index) => (
-
+    <div ref={projectRef} id='projects' className='projects'>
+    {projects.map((project,index) => (
           <div
             key={index}
             className={`content-title ${activeIndex === index ? 'active' : ''}`}
             //  ref={ref => refArray.current[index] = ref}
           >
               <div className='active-wrap'>
-                <p className={`content-title ${activeIndex === index ? 'active-1' : ''}`}>
+                <p className={` ${activeIndex === index ? 'active-1' : ''}`}>
                 {project.title}
                 </p>
               </div>
-             {/* <p className='project-link'>{project.link}</p> */}
-              <a  className={`project-link ${activeIndex === index ? 'display' : ''}`} href={project.link} target='_blank'>open project</a>
-            
+              <a 
+              onMouseEnter={() => handleHover(project)} 
+              onMouseLeave={() => handleHover(project)} 
+              className={`project-link ${activeIndex === index ? 'display' : ''}`} 
+              href={project.link} 
+              target='_blank'>open project</a>
           </div>
-              
-     
-      ))}
-    
-    
+    ))}
+   
       {projects.map((project, index) => {
-
         return (
-          <div>
-          {/* <div
-          key={index}
-          className={`content-title ${activeIndex === index ? 'active' : ''}`}
-       
-        >
-          {project.title}
-        </div> */}
-          <ProjectCard key={project.id} project={project} index={index} refs={refs}  visibleIndices={visibleIndices} />
-          {/* <a  className='project-link' href={project.link} target='_blank'>open project</a> */}
-          </div>
+          <div className={`${hover ? 'hover-img' : ''}`}>
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            index={index} 
+            refs={refs} 
+            hover={hover} 
+            visibleIndices={visibleIndices} />
+            </div>
         )
       })}
+    
     </div>
   )
 }

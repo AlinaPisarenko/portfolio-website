@@ -8,20 +8,29 @@ export default function Home() {
         <div className='line' id='line-bottom'></div>
              
         <div className="home-container">
+      
             <h2>I'm a front-end <br/>
                 web developer <br/>
                 based in New York
             </h2>
-            <div className="home-container-inner">
+            <div className='home-links'>
+                <a href="#projects" className="nav-link">my work</a>
+                <a href="#contact" className="nav-link">contact me</a>
+                <a href="#skills" className="nav-link">skills</a>
+            </div>
+           
+            
+            <div id="home-container-inner">
                 <div className='f-name'>
                     <h1>
                         <span id='cap-letter'>W</span>
                         <span className='low-letter'>e</span>
                         <span className='low-letter'>b</span>
                     </h1>
+                   
                 </div>
                 <div className="l-name">
-                    <h1>    
+                    <h1 id='title-lower'>    
                     <span className='low-letter'>D</span>
                     <span className='low-letter'>e</span>
                     <span className='low-letter'>v</span>
