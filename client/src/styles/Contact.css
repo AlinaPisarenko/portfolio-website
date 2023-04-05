@@ -14,9 +14,9 @@
 }
 
 .contact-title {  
-    font-size: 10vw;
+    font-size: 20rem;
     font-weight: 600;
-    width: 50vw;
+    width: 60vw;
     letter-spacing: -0.5rem;
     line-height: 1;
     text-align: end;
@@ -51,7 +51,7 @@
 
 .contact-link {
     color: var(--bg-main);
-    font-size: 4rem;
+    font-size: 6rem;
     text-decoration: none;
     font-weight: 400;
     display: block;

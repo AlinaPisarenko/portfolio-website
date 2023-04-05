@@ -5,8 +5,8 @@ export default function Navbar() {
   return (
     <div className='navbar'>
       
-      <h4>specialized in Front End Development.<br>
-      </br>based in New York.
+      <h4>Alina Pisarenko<br>
+      </br>specialized in front-end development
       </h4>
       <a href="#projects" className="nav-link">my work</a>
       <a href="#contact" className="nav-link">contact me</a>

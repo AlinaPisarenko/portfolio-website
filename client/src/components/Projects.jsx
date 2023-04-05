@@ -7,28 +7,77 @@ import ProjectCard from './ProjectCard'
 export default function Projects({ projects }) {
 
   const [activeIndex, setActiveIndex] = useState(null);
-  // const refArray = useRef([]);
   const [currentProject, setCurrentProject] = useState(null);
   const [hover, setHover] = useState(false)
+  const [visibleIndices, setVisibleIndices] = useState([]);
+
   const refs = useRef(projects?.map(() => null));
   const projectRef = useRef(null)
-  const [visibleIndices, setVisibleIndices] = useState([]);
+ console.log("curr project ref", projectRef.current)
+
+
+
+  const [isVisible, setIsVisible] = useState(false)
+  const [project, setProject] = useState(false)
+
+  const displayLine = (entries) => {
+    console.log(entries)
+    const [ entry ] = entries
+    setIsVisible(entry.isIntersecting)
+  }
+
+  const displayProject = (entries) => {
+    console.log(entries)
+    const [ entry ] = entries
+    setIsVisible(entry.isIntersecting)
+
+
+  }
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+
+  //test
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(displayLine, options);
+    if (projectRef.current) observer.observe(projectRef.current);
+
+    return () => {
+      if (projectRef.current) observer.unobserve(projectRef.current);
+    }
+
+  }, [projectRef, options])
+  
+  
+
+ 
+  
+  
+
+
 
   useEffect(() => {
     const onScroll = () => {
       const  divBottom  = projectRef.current.getBoundingClientRect().bottom;
+   
+
       const newVisibleIndices = refs.current
         .map((ref, index) => {
           if (ref) {
             const { top, bottom } = ref.getBoundingClientRect();
             const windowHeight = window.innerHeight;
-
+    
             if (top < windowHeight && bottom >= 0) {
               
-              if (top < windowHeight/2) {
+              if (top < windowHeight/1.2) {
                 setActiveIndex(index)
               }
-              if (divBottom < windowHeight/1.3) {
+              if (divBottom < windowHeight/1.3 ) {
                 setActiveIndex(null)
               }
               return index;
@@ -46,40 +95,43 @@ export default function Projects({ projects }) {
     return () => {
         window.removeEventListener('scroll', onScroll);
       };
-    }, []);
+  }, []);
 
-const handleHover = (project) => {
-  console.log('active index', activeIndex)
-  console.log('curr ref', refs.current[activeIndex])
+const handleHover = () => {
+  // console.log('active index', activeIndex)
+  // console.log('curr ref', refs.current[activeIndex])
   setHover(!hover)
   setCurrentProject(activeIndex)
 }
 
   return (
     <div ref={projectRef} id='projects' className='projects'>
-    {projects.map((project,index) => (
-          <div
-            key={index}
-            className={`content-title ${activeIndex === index ? 'active' : ''}`}
-            //  ref={ref => refArray.current[index] = ref}
-          >
-              <div className='active-wrap'>
-                <p className={` ${activeIndex === index ? 'active-1' : ''}`}>
-                {project.title}
-                </p>
-              </div>
-              <a 
-              onMouseEnter={() => handleHover(project)} 
-              onMouseLeave={() => handleHover(project)} 
-              className={`project-link ${activeIndex === index ? 'display' : ''}`} 
-              href={project.link} 
-              target='_blank'>open project</a>
-          </div>
-    ))}
+
+      <div className='line' id={`${isVisible ? 'line-top-projects' : ''}`} ></div>
+      <p className={`${isVisible ? 'work-name-display' : 'work-name'}`} >my work</p>
+
+      {projects.map((project,index) => (
+            <div
+              key={index}
+              className={`content-title ${activeIndex === index ? 'active' : ''}`}
+              //  ref={ref => refArray.current[index] = ref}
+            >
+                <div className='active-wrap'>
+                  <p className={` ${activeIndex === index ? 'active-1' : ''}`}>
+                  {project.title}
+                  </p>
+                </div>
+                <a 
+                onMouseEnter={handleHover} 
+                onMouseLeave={handleHover} 
+                className={`project-link ${activeIndex === index ? 'display' : ''}`} 
+                href={project.link} 
+                target='_blank'>open project</a>
+            </div>
+      ))}
    
       {projects.map((project, index) => {
         return (
-    
           <ProjectCard 
             key={project.id} 
             project={project} 
@@ -87,9 +139,7 @@ const handleHover = (project) => {
             refs={refs} 
             currentProject={currentProject}
             hover={hover} 
-            // setHover={setHover}
             visibleIndices={visibleIndices} />
-     
         )
       })}
     

@@ -31,14 +31,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2000;
-
-
     background: transparent;
     border: none;
     margin: 30px auto 0;
     display: none;
     outline: none;
-
     transition: 0.3s;
     padding: 10px; 
 }
@@ -54,12 +51,17 @@
         right: 0;
         margin: 0 auto;
         width: 0;
-        transition: 0.3s;
+        transition: all 0.3s ease-in-out;
+}
+
+.project-link:hover {
+    color: var( --secondary);
 }
         
 .project-link:hover::before {
         width: 100%;
         padding: 0;
+        
 }
 
 .project-link:active {

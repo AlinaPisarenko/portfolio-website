@@ -30,7 +30,6 @@ h1 {
     font-weight: 700;
     /* line-height: 1.2; */
     letter-spacing: -1.3rem;
-    /* width: min-content; */
     position: relative;
     display: flex;
     /* overflow: visible;
@@ -49,6 +48,8 @@ h1 {
 
 .home-links a {
   color: var(--secondary);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: -0.5rem;
 }
 
 .f-name h1 {
@@ -204,6 +205,43 @@ h2 {
   }
 
 
+  .nav-link-home  {
+    width: max-content;
+    color: var(--font-main);
+    text-decoration: none;
+    font-size: 2rem;
+    position: relative;
+    background: transparent;
+    transition: 0.3s;
+    padding: 4px 0; 
+   
+    
+}
+   
+.nav-link-home::before {
+        content: '';
+        border-bottom: 1px solid var(--font-main);
+        padding: 0 5px;
+        position: absolute;
+        bottom: 0;
+        /* left: 0; */
+        right: 0;
+        width: 0;
+        transition: 0.3s;
+}
+        
+.nav-link-home:hover::before {
+        width: 100%;
+        padding: 0;
+        cursor: pointer;
+}
+
+.nav-link-home:active {
+    background: var(--font-main);
+    color: var(--bg-main);
+    transition: 0.1s;
+    /* padding: 0 5px; */
+}
 
 
 

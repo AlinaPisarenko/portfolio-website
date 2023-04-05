@@ -13,12 +13,12 @@ export default function Home() {
                 web developer <br/>
                 based in New York
             </h2>
+
             <div className='home-links'>
-                <a href="#projects" className="nav-link">my work</a>
-                <a href="#contact" className="nav-link">contact me</a>
-                <a href="#skills" className="nav-link">skills</a>
+                <a href="#projects" className="nav-link-home">my work</a>
+                <a href="#contact" className="nav-link-home">contact me</a>
+                <a href="#skills" className="nav-link-home">skills</a>
             </div>
-           
             
             <div id="home-container-inner">
                 <div className='f-name'>

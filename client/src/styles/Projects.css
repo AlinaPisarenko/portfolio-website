@@ -9,7 +9,7 @@
     align-items: center;
     gap: 4rem;
     margin-bottom: -6rem;
-    
+    position: relative;
 }
 
 .hover-img {
@@ -70,3 +70,38 @@
   .display {
     display: block!important;
   }
+
+  #line-top-projects {
+    top: 7vh;
+    right: 0;
+    width: 30vw;
+}
+
+#line-top-projects::before { 
+    top: 0;
+    right: 0;
+    animation: animate-top 0.5s linear;
+    animation-fill-mode: forwards;     
+}
+
+.work-name {
+  display: none;
+}
+
+.work-name-display {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  top: 8vh;
+  right: 25vw;
+  animation: move-in-right 0.5s linear;
+}
+
+@keyframes move-in-right {
+  from {
+    right: 0vw;
+  }
+  to {
+    right: 25vw;
+  }
+}

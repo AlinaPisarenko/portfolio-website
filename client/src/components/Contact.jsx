@@ -13,7 +13,7 @@ export default function Contact() {
         const currentScrollPos = window.pageYOffset
         const { top, bottom } = ref.current.getBoundingClientRect();
       
-        if (windowHeight >= top) {
+        if (windowHeight >= top/1.1) {
           setIsVisible(true);
         } else {
           setIsVisible(false);
