@@ -1,4 +1,4 @@
-from flask import Flask, make_response, jsonify
+from flask import Flask, make_response, jsonify, render_template
 from flask_cors import CORS
 from database import load_projects_from_db
 
@@ -8,6 +8,11 @@ app = Flask(__name__,
             template_folder='../client/dist')
 
 CORS(app)
+
+@app.route('/')
+@app.route('/<int:id>')
+def index(id=0):
+    return render_template("index.html")
 
 @app.route('/projects', methods=['GET'])
 def projects():
