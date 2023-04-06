@@ -72,7 +72,7 @@ h4 {
     0% {
         transform: translateX(100vw);
       }
-    15% {
+    12% {
         transform: none;
   }
 }

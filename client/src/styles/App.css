@@ -112,7 +112,7 @@ img, picture, video, canvas, svg {
 
 
 @media screen and (max-width: 480px) {
-  .App {
-   
-  }
+  /* .App {
+    font-size: 50%;
+  } */
 }

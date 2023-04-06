@@ -146,3 +146,25 @@
     100% { transform: translateX(0); }
   }
 
+  @media screen and (max-width: 480px) {
+    .contact-title {  
+        font-size: 10rem;
+        font-weight: 600;
+        width: 80vw;
+    }
+
+    .contact-links {
+        gap: 2rem;
+        padding-top: 10rem;
+        align-items: flex-end;
+        position: absolute;
+        right: 4%;
+        opacity: 0;
+       
+    }
+    
+    .contact-link {
+        font-size: 4rem;
+    
+    }
+  }

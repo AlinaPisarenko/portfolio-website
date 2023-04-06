@@ -120,7 +120,7 @@
   text-align: center;
   position: sticky;
   top: 20%;
-  opacity: 0;
+  opacity: 1;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
@@ -129,6 +129,12 @@
 .active-1 {
   opacity: 1;
   animation: none
+}
+
+.active-wrap {
+  overflow: visible;
+  height: 0rem;
+  width: 100%;
 }
 
 }
