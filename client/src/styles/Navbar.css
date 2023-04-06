@@ -88,8 +88,15 @@ h4 {
         width: 90vw;
         margin-left: 2rem;
         display: flex;
-        flex-direction: column;
-        gap: 0rem;
+        flex-direction: row;
+        
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
         animation:none;
     }
+    h4 {
+        display: none;
+    }
+    
 }
