@@ -13,7 +13,7 @@ export default function Projects({ projects }) {
 
   const refs = useRef(projects?.map(() => null));
   const projectRef = useRef(null)
- console.log("curr project ref", projectRef.current)
+
 
 
 
@@ -21,7 +21,6 @@ export default function Projects({ projects }) {
   const [isVisible, setIsVisible] = useState(false)
   
   const displayLine = (entries) => {
-    console.log(entries)
     const [ entry ] = entries
     setIsVisible(entry.isIntersecting)
   }

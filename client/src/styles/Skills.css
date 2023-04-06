@@ -114,3 +114,64 @@
 }
 
 
+@media screen and (max-width: 480px) {
+  .skills {
+    min-height: 100svh;
+     height: min-content;
+      font-size: 2.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      padding-right: 0rem;
+     
+  }
+
+  .skills-front {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+ }
+ 
+
+  #skills-1 {
+    animation:none
+    /* animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s); */
+}
+#skills-2 {
+  animation:none
+  /* animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s); */
+}
+#skills-3 {
+  animation:none
+  /* animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s); */
+}
+#skills-4 {
+  animation:none
+  /* animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s); */
+}
+#skills-5 {
+  animation:none
+  /* animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s); */
+}
+
+/* @keyframes scroll-skills-1 {
+
+  from {
+      transform: translateX(110%);
+    }
+    to {
+      transform: translateX(-1600%);
+}
+} */
+  
+}
