@@ -42,11 +42,7 @@ export default function Projects({ projects }) {
   }, [projectRef, options])
   
   
-
- 
   
-  
-
 
 
   useEffect(() => {
@@ -87,8 +83,6 @@ export default function Projects({ projects }) {
   }, []);
 
 const handleHover = () => {
-  // console.log('active index', activeIndex)
-  // console.log('curr ref', refs.current[activeIndex])
   setHover(!hover)
   setCurrentProject(activeIndex)
 }
@@ -103,7 +97,6 @@ const handleHover = () => {
             <div
               key={index}
               className={`content-title ${activeIndex === index && isVisible ? 'active' : ''}`}
-              //  ref={ref => refArray.current[index] = ref}
             >
                 <div className='active-wrap'>
                   <p className={` ${activeIndex === index && isVisible ? 'active-1' : ''}`}>

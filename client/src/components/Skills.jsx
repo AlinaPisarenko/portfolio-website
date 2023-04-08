@@ -35,7 +35,7 @@ export default function Skills({ position }) {
           <div>typescript</div>
         </div>
         <div className='skills-front' id='skills-2' >
-          <div>html3</div>
+          <div>html5</div>
           <div>css</div>
           <div>scss</div>
           <div>figma</div>
@@ -50,6 +50,7 @@ export default function Skills({ position }) {
           <div>flask</div>
           <div>ruby on rails</div>
           <div>node.js</div>
+          <div>express</div>
         </div>
 
         <div className='skills-front' id='skills-5' >
