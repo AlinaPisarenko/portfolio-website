@@ -9,8 +9,9 @@ export default function Home() {
              
         <div className="home-container">
       
-            <h2>I'm a front-end <br/>
-                web developer <br/>
+            <h2>
+                <span className='name'>Alina Pisarenko</span>
+                front-end web developer <br/>
                 based in New York
             </h2>
 

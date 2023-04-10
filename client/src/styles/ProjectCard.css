@@ -104,7 +104,13 @@
     animation: fade-in 1s ease-in-out forwards;
   }
   
+.title-sm-screen {
+  display: none;
+}
 
+.project-link-sm-screen {
+  display: none;
+}
 
   @media screen and (max-width: 480px) {
     .image {
@@ -112,7 +118,13 @@
       height: auto;
       opacity: 0;
       /* margin-top: -14rem; */
-      margin-bottom: 10rem;
+      margin-bottom: 0rem;
+      margin-top: 10rem;
+     text-align: center;
+    }
+
+    .image:first-of-type {
+      
     }
   
     .project-card-img {
@@ -125,12 +137,53 @@
       font-weight: 600;
       font-size: 6rem;
       letter-spacing: -0.1rem;
-      /* padding-top: 4rem;
-      padding-bottom: 2rem; */
       position: absolute;
       top:30%;
       z-index: 900;
   }
+
+  .title-sm-screen {
+    display: block;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    margin-top: 0rem;
+  }
+
+  .project-link-sm-screen {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-main);
+    text-decoration: none;
+    font-size: 2.4rem; 
+    z-index: 2000;
+    background: transparent;
+    margin-top: 1rem;
+    transition: 0.3s;
+    padding: 10px; 
+   
+  }
+
+  .project-link-sm-screen::before {
+    content: '';
+    border-bottom: 1px solid var(--font-main);
+    padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-link-sm-screen:hover {
+    color: var( --secondary);
+  }
+      
+  .project-link-sm-screen:hover::before {
+    width: 50%;
+    padding: 0;
+      
+}
   
-    
   }

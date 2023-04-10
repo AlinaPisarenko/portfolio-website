@@ -48,12 +48,12 @@ export default function Skills({ position }) {
         <div className='skills-front' id='skills-4' >
           <div>python</div>
           <div>flask</div>
-          <div>ruby on rails</div>
           <div>node.js</div>
           <div>express</div>
         </div>
 
         <div className='skills-front' id='skills-5' >
+          <div>ruby on rails</div>
           <div>sql</div>
           <div>sqlalchemy</div>
           <div>mongodb</div>

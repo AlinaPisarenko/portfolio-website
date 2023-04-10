@@ -112,7 +112,11 @@ img, picture, video, canvas, svg {
 
 
 @media screen and (max-width: 480px) {
-  /* .App {
-    font-size: 50%;
-  } */
+  .App {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
 }

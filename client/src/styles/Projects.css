@@ -110,26 +110,27 @@
 
     gap: 4rem;
     margin-bottom: -6rem;
+    padding-bottom: 10rem;
 }
 
 .content-title {
-  font-size: 6rem;
-  font-weight: 500;
-  margin-top: 0rem;
+  font-size: 4rem;
+  margin-bottom: 10rem;
   margin-top: 2rem;
   text-align: center;
-  position: sticky;
+  position: relative;
   top: 20%;
   opacity: 1;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
+  display: none;
 }
-
+/* 
  
 .active-1 {
   opacity: 1;
   animation: none
-}
+} */
 
 .active-wrap {
   overflow: visible;

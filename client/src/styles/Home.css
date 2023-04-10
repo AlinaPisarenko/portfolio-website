@@ -83,12 +83,15 @@ h1 span {
 }
 
 h2 {
+ 
     text-align: right;
-    font-size: 4rem;
-    font-weight: 600;
+    font-size: 3.6rem;
+    font-weight: 300;
     align-self: end;
     /* letter-spacing: 0rem; */
     line-height: 1;
+    color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
 }
 
 .line {
@@ -230,6 +233,14 @@ h2 {
     /* padding: 0 5px; */
 }
 
+.name {
+  display: block;
+  color: var(--font-main);
+  font-family: 'Antonio', sans-serif;
+  font-weight: 600;
+  font-size: 6rem;
+  padding-bottom: 2rem;
+}
 
 
 @keyframes text-clip {
@@ -275,7 +286,7 @@ h2 {
   @media screen and (max-width: 480px) {
     .home {
       width: 100svw;
-      height: 108svh;
+      height: 100svh;
     }
 
     h1 {
@@ -295,15 +306,69 @@ h2 {
   
     h2 {
    
-      font-size: 2.8rem;
+      font-size: 2rem;
       font-weight: 400;
       line-height: 1.1;
+      padding-top: 1rem;
+      /* margin-top: 0rem; */
   }
 
-    .home-links {
-      margin-top: -38rem;
+ 
 
-  
+    /* .home-links {
+      margin-top: -28rem;
+    } */
+
+    .home-container {
+      height: 72vh;
+      width: 95vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  @keyframes inner-left-50 {
+    from {
+      transform: translateX(-65%);
     }
+    to {
+      transform: none;
+    }
+  }
+
+  #line-top {
+    top: 8vh;
+    right: 0;
+}
+
+.home-links {
+ display: none;
+}
+
+.name {
+  display: block;
+  color: var(--font-main);
+  font-family: 'Antonio', sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
   
+  }
+
+
+  @media screen and (max-width: 1400px) {
+    h1 {
+      font-size: 20rem;
+      font-weight: 700;
+      letter-spacing: -1.3rem;
+      position: relative;
+      display: flex;
+  }
+
+  h1 span {
+    height: 20rem;
+    line-height: 0.8;
+}
+
   }

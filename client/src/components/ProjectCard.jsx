@@ -9,17 +9,27 @@ export default function ProjectCard({project, index, visibleIndices, refs, curre
   return (
     <div 
     ref={ref => refs.current[index] = ref}
-     name={project.id}
+    name={project.id}
     className={`image 
                 ${visibleIndices.includes(index) ? 'animate' : ''}
                 ${currentProject+1 === project.id && hover ? 'hover-img' : ''}
               `}>
+              
+      <p className='title-sm-screen'>
+           {project.title}
+      </p>
       <img
             className={`project-card-img ${project.id}`}
             // src='/jobhub.png'
             src={project.image}
             alt={`Image for ${project.title} project`}
       />
+      <a 
+                // onMouseEnter={handleHover} 
+                // onMouseLeave={handleHover} 
+                className='project-link-sm-screen' 
+                href={project.link} 
+                target='_blank'>open project</a>
   </div>
   )
 }
