@@ -283,6 +283,23 @@ h2 {
 
   /* MEDIA QUERIES */
 
+
+  @media screen and (max-width: 1400px) {
+    h1 {
+      font-size: 20rem;
+      font-weight: 700;
+      letter-spacing: -1.3rem;
+      position: relative;
+      display: flex;
+  }
+
+  h1 span {
+    height: 20rem;
+    line-height: 0.8;
+}
+
+  }
+
   @media screen and (max-width: 480px) {
     .home {
       width: 100svw;
@@ -356,19 +373,3 @@ h2 {
   
   }
 
-
-  @media screen and (max-width: 1400px) {
-    h1 {
-      font-size: 20rem;
-      font-weight: 700;
-      letter-spacing: -1.3rem;
-      position: relative;
-      display: flex;
-  }
-
-  h1 span {
-    height: 20rem;
-    line-height: 0.8;
-}
-
-  }
