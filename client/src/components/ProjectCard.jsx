@@ -20,16 +20,13 @@ export default function ProjectCard({project, index, visibleIndices, refs, curre
       </p>
       <img
             className={`project-card-img ${project.id}`}
-            // src='/jobhub.png'
             src={project.image}
             alt={`Image for ${project.title} project`}
       />
-      <a 
-                // onMouseEnter={handleHover} 
-                // onMouseLeave={handleHover} 
-                className='project-link-sm-screen' 
-                href={project.link} 
-                target='_blank'>open project</a>
+      <a
+            className='project-link-sm-screen' 
+            href={project.link} 
+            target='_blank'>open project</a>
   </div>
   )
 }

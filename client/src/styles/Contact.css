@@ -17,7 +17,6 @@
     line-height: 1;
     text-align: end;
     position: absolute;
-    /* left: 47vw; */
     bottom: 6vh;
     right: -100%;
 }
@@ -104,36 +103,6 @@
         right: 4%;
     }
 }
-
-/* @-webkit-keyframes move {
-    0% { 
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0); 
-    }
-    50% { 
-        -webkit-transform: translateX(135%);
-        -moz-transform: translateX(-135%); 
-    }
-    100% { 
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0); 
-    }
-  } */
-/* 
-  @-moz-keyframes move {
-    0% { 
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0); 
-    }
-    50% { 
-        -webkit-transform: translateX(135%);
-        -moz-transform: translateX(-135%); 
-    }
-    100% { 
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0); 
-    }
-  } */
 
 
 @keyframes move {

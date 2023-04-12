@@ -3,30 +3,12 @@ import '../styles/Skills.css'
 
 
 export default function Skills({ position }) {
-  // const frontSkills = useRef(0);
 
-  // if (position>0,  frontSkills.current.clientWidth) {
-  //   console.log("position",position, typeof(position))
-  //   console.log("window width", window.innerWidth, typeof(window.innerWidth))
-  //   console.log("el width", frontSkills.current.clientWidth, typeof(frontSkills.current.clientWidth))
-  //   let el_position = position*window.innerWidth/2 - parseFloat(frontSkills.current.clientWidth )
-
-  //   frontSkills.style = {
-  //     left: el_position
-  //   }
-    
-  //   console.log('final pos',el_position)
-  //   console.log(frontSkills.style.left)
-  // }
-
-
-  // style={{left: `${el_position}`}}
 
   return (
    
     <div id='skills' className='skills'>
 
-      {/* <div ref={frontSkills} className='skills-bg'></div> */}
 
         <div className='skills-front' id='skills-1' >
           <div>javascript</div>
