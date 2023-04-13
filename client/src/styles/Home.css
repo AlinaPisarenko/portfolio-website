@@ -21,10 +21,10 @@
 }
 
 h1 {
-    font-size: 28rem;
-    font-weight: 700;
+    font-size: 37rem;
+    font-weight: 400;
     /* line-height: 1.2; */
-    letter-spacing: -1.3rem;
+    letter-spacing: -2.2rem;
     position: relative;
     display: flex;
 
@@ -72,8 +72,8 @@ h1 {
 }
 
 h1 span {
-  height: 32rem;
-  line-height: 0.8;
+  height: 40rem;
+  line-height: 0.9;
 }
 
 .low-letter:hover {
@@ -168,7 +168,7 @@ h2 {
     display: flex;
     flex-direction: column;
     animation: inner-left-50 1s 1s ease both;
-    margin-top: -12rem;
+    margin-top: -30rem;
   }
   
   .f-name {
@@ -263,7 +263,7 @@ h2 {
   
   @keyframes inner-left-50 {
     from {
-      transform: translateX(-50%);
+      transform: translateX(-60%);
     }
     to {
       transform: none;
@@ -272,7 +272,7 @@ h2 {
 
   @keyframes inner-left-20 {
     from {
-      transform: translateX(35%);
+      transform: translateX(40%);
     }
     to {
       transform: none;
@@ -286,18 +286,26 @@ h2 {
 
   @media screen and (max-width: 1400px) {
     h1 {
-      font-size: 20rem;
-      font-weight: 700;
-      letter-spacing: -1.3rem;
+      font-size: 28rem;
+      font-weight: 400;
+      letter-spacing: -1.5rem;
       position: relative;
       display: flex;
   }
 
-  h1 span {
-    height: 20rem;
-    line-height: 0.8;
-}
+    h1 span {
+      height: 30rem;
+      line-height: 0.9;
+  }
 
+    @keyframes inner-left-50 {
+      from {
+        transform: translateX(-65%);
+      }
+      to {
+        transform: none;
+      }
+    }
   }
 
   @media screen and (max-width: 480px) {
