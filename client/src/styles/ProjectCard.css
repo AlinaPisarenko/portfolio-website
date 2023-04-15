@@ -1,21 +1,14 @@
 @import url("App.css");
 
-.project-card {
-
-}
-
 .project-card-img {
     width: 60rem;
     opacity: 0.6;
-
 }
 
 .project-card-title {
     font-weight: 600;
     font-size: 8rem;
     letter-spacing: -0.1rem;
-    /* padding-top: 4rem;
-    padding-bottom: 2rem; */
     position: absolute;
     top:30%;
     z-index: 900;
@@ -86,20 +79,6 @@
     margin-top: -26rem;
   }
 
- 
-
-  /* .image img:last-child {
-    margin-bottom: -20rem;
-  } */
-
-  /* .project-card-img:last-child {
-    margin-bottom: -20rem;
-  } */
-
-  /* .project-card-img:last-of-type {
-    margin-bottom: -20rem;
-  } */
-  
   .animate {
     animation: fade-in 1s ease-in-out forwards;
   }
@@ -111,6 +90,8 @@
 .project-link-sm-screen {
   display: none;
 }
+
+  /* MEDIA QUERIES */
 
   @media screen and (max-width: 480px) {
     .image {

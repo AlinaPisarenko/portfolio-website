@@ -1,20 +1,4 @@
 :root {
-  /* --bg-main: #070937;
-  --font-main: #f2c4b8; */
-  /* --bg-main: #181f2a;
-  --font-main:#df888f; */
-
-  /* --bg-main: #4832d5; */
-
-  /* --bg-main: #3f109d; */
-  /* --font-main: #ccf281 ; */
-
-  /* --bg-main: #7e46e8 ; */
-
-  /* --bg-main: #7e46e8  ;
-  --font-main: #e8fb64; */
-  /* --secondary: #f82cda; */
-
   --bg-main: #1F1F1F;
   --font-main: #FE93AD;
   --secondary: #FDFEFB
@@ -40,7 +24,6 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-main);
   color: var(--font-main);
-  /* font-family: 'Poppins', sans-serif; */
   font-family: 'Antonio', sans-serif;
   font-weight: 300;
 }
@@ -67,34 +50,22 @@ img, picture, video, canvas, svg {
   display: flex;
 }
 
-
-
-
-
-
-
-
+  /* ANIMATIONS */
 
 @keyframes scrolling {
   0% {
       top: 70%;
       opacity: 0;
-      /* transform: translate(-30%, -50); */
   }
   50% {
       opacity: 0;
- 
-      /* transform: translate(-50%, -50%); */
   }
 
   100% {
       opacity: 1;
       top: 0;
-      /* transform: translate(-50%, -50%); */
   }
 }
-
-
 
 
 
@@ -109,7 +80,7 @@ img, picture, video, canvas, svg {
   }
 }
 
-
+  /* MEDIA QUERIES */
 
 @media screen and (max-width: 480px) {
   .App {

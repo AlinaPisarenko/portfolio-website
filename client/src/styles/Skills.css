@@ -63,6 +63,8 @@
     animation-delay: calc(var(--scroll) * -1s);
 }
 
+  /* ANIMATIONS */
+
 @keyframes scroll-skills-1 {
 
     from {
@@ -113,7 +115,7 @@
   }
 }
 
-
+  /* MEDIA QUERIES */
 
 @media screen and (max-width: 1400px) {
   .skills {

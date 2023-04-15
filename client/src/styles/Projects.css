@@ -33,20 +33,6 @@
     transition: all 0.3s ease-in-out;
   }
 
-
-@keyframes title-animation {
-    0% {
-      /* opacity: 0; */
-      transform: translateY(70%) 
-      /* scale(0.9); */
-    }
-    100% {
-      /* opacity: 1; */
-      transform: translateY(0) 
-      /* scale(1); */
-    }
-  }
-
   .active {
     opacity: 1;
   }
@@ -95,6 +81,17 @@
   animation: move-in-right 0.5s linear;
 }
 
+  /* ANIMATIONS */
+
+@keyframes title-animation {
+    0% {
+      transform: translateY(70%) 
+    }
+    100% {
+      transform: translateY(0) 
+    }
+}
+
 @keyframes move-in-right {
   from {
     right: 0vw;
@@ -103,6 +100,8 @@
     right: 25vw;
   }
 }
+
+  /* MEDIA QUERIES */
 
 @media screen and (max-width: 480px) {
   .projects {
