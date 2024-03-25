@@ -62,7 +62,7 @@
 }
 
 #email::after {
-    content: 'email';
+    content: 'portal';
 }
 
 #linkedin::after {
